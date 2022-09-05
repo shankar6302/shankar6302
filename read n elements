@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+
+void arrayprint(int a[],int i, int n)
+{
+    if(i<n)
+    {
+        printf("%d ",a[i]);
+        arrayprint(a,i+1,n);
+    }
+}
+
+int main()
+{
+    int i,n;
+    printf("enter array size");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter array elements");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    arrayprint(a,0,n);
+    return 0;
+}
